@@ -29,15 +29,16 @@ const app = new Vue({
     
   methods:{
     
-    doIt(){
+    doIt(singleTodo){
 
-      if (this.todo = false) {
-        this.todo = true;
+      console.log('click',singleTodo);
 
-        console.log(this.todo);
-      };
-
-      console.log(doIt);
+      if (singleTodo.done == false) {
+        singleTodo.done = true;
+      }else{
+        singleTodo.done = false;
+      }
+      
     },
 
   }

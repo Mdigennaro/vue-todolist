@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.min.css" integrity="sha512-SUwyLkI1Wgm4aEZkDkwwigXaOI2HFLy1/YW73asun4sfvlkB9Ecl99+PHfCnfWD0FJjIuFTvWMM7BZPXCckpAA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="css/style.css">
 
   <title>Vue To Do List</title>
@@ -27,8 +29,8 @@
       <div class="box">
 
         <ul>
-          <li v-for="{text} in todo">
-            <p>{{text}}</p>
+          <li @click="doIt(task)" :class="[task.done ? true : 'sbarrato']" v-for="task in todo">
+            <p>{{task.text}}</p>
           </li>
         </ul>
 
