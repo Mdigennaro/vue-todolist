@@ -24,7 +24,23 @@ const app = new Vue({
         text: 'Connettersi alla lezione',
         done: false
       },
-    ]
+    ],
+  },
+    
+  methods:{
+    
+    doIt(){
+
+      if (this.todo = false) {
+        this.todo = true;
+
+        console.log(this.todo);
+      };
+
+      console.log(doIt);
+    },
+
   }
 
 })
+

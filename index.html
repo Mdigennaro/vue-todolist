@@ -14,9 +14,26 @@
   <div id="app">
 
     <div class="container">
-      <h1>Cose da fare</h1>
+      <div class="logo">
+        <img src="img/Logo.png" alt="logo">
+        <span>Boolean</span>
+      </div>
 
-      
+      <form action="">
+        <input type="text" placeholder="Nuovo ToDo">
+        <button class="btn">Aggiungi</button>
+      </form>
+
+      <div class="box">
+
+        <ul>
+          <li v-for="{text} in todo">
+            <p>{{text}}</p>
+          </li>
+        </ul>
+
+      </div>
+
     </div>
 
   </div>
