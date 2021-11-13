@@ -6,23 +6,23 @@ const app = new Vue({
     todo:[
       {
         text: 'Alzarsi dal letto',
-        done: false
+        done: true
       },
       {
         text: 'Cambiarsi',
-        done: false
+        done: true
       },
       {
         text: 'Lavarsi',
-        done: false
+        done: true
       },
       {
         text: 'Fare colazione',
-        done: false
+        done: true
       },
       {
         text: 'Connettersi alla lezione',
-        done: false
+        done: true
       },
     ],
   },
@@ -33,13 +33,20 @@ const app = new Vue({
 
       console.log('click',singleTodo);
 
-      if (singleTodo.done == false) {
-        singleTodo.done = true;
-      }else{
+      if (singleTodo.done == true) {
         singleTodo.done = false;
+      }else{
+        singleTodo.done = true;
       }
       
     },
+
+    deleteElement(singleTodo){
+      console.log('delete',singleTodo);
+
+      this.todo.splice(singleTodo, 1)
+
+    }
 
   }
 

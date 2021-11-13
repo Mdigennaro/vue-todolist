@@ -29,8 +29,9 @@
       <div class="box">
 
         <ul>
-          <li @click="doIt(task)" :class="[task.done ? true : 'sbarrato']" v-for="task in todo">
+          <li @click="doIt(task)" v-for="task in todo" :class="[task.done ? true : 'sbarrato']" >
             <p>{{task.text}}</p>
+            <i @click="deleteElement(task)" class="fas fa-times"></i>
           </li>
         </ul>
 
