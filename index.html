@@ -21,17 +21,20 @@
         <span>Boolean</span>
       </div>
 
-      <form action="">
-        <input type="text" placeholder="Nuovo ToDo">
-        <button class="btn">Aggiungi</button>
-      </form>
+        <input type="text"
+        placeholder="Nuovo ToDo">
+        <button
+        class="btn">Aggiungi</button>
 
       <div class="box">
 
         <ul>
-          <li @click="doIt(task)" v-for="task in todo" :class="[task.done ? true : 'sbarrato']" >
-            <p>{{task.text}}</p>
-            <i @click="deleteElement(task)" class="fas fa-times"></i>
+          <li @click="doIt(task)" v-for="(task, index) in todo" 
+         >
+            <p :class="{
+              'sbarrato' : task.done
+            }" >{{task.text}}</p>
+            <i @click="deleteElement(index)" class="fas fa-times"></i>
           </li>
         </ul>
 

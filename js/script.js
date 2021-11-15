@@ -6,25 +6,30 @@ const app = new Vue({
     todo:[
       {
         text: 'Alzarsi dal letto',
-        done: true
+        done: false
       },
       {
         text: 'Cambiarsi',
-        done: true
+        done: false
       },
       {
         text: 'Lavarsi',
-        done: true
+        done: false
       },
       {
         text: 'Fare colazione',
-        done: true
+        done: false
       },
       {
         text: 'Connettersi alla lezione',
-        done: true
+        done: false
       },
     ],
+
+    newTodo:{
+      text: 'text',
+      done: false
+    }
   },
     
   methods:{
@@ -41,12 +46,11 @@ const app = new Vue({
       
     },
 
-    deleteElement(singleTodo){
-      console.log('delete',singleTodo);
+    deleteElement(index){
+      console.log('delete',index);
 
-      this.todo.splice(singleTodo, 1)
-
-    }
+      this.todo.splice(index,1)
+    },
 
   }
 
